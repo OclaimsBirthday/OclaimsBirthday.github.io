@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,16 @@
     <!-- <link href="/CSS/style.css" rel="stylesheet"> -->
      <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
 </head>
-<body class="bg-dark text-light">
+
+
+<!-- class="bg-dark text-light" (original for the <body> tag, replaced with dark mode color mode from Bootstrap v5.3.3) -->
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Birthday :3</a>
+        </div>
+    </nav>
     <!--Add a navbar. Should probably include the vrc group, Oclaim's vrc profile. His discord tag. And maybe something else if I can think of something-->
     <h1 class="text-center">Hewwo :3</h1>
 
@@ -21,12 +30,13 @@
     <p class="text-center">Happy Birthday Oclaim! :3</p>
 
     <button class="btn btn-primary btn-center d-block mx-auto" onclick="TestFetch()">Test Button :3</button>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="/JS/Index.js"></script>
 </body>
 </body>
 </html>
+
 
 <!-- TODO list:
     Add a button that orders him a cake.
