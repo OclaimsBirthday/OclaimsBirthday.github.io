@@ -1,9 +1,20 @@
-function TestFetch() {
-  fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+const API_KEY = "testkey";
+const backendURL = "https://stable-supposedly-boar.ngrok-free.app"; // Use public URL
 
+const ws = new WebSocket(backendURL.replace("http", "ws"));
+
+ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    document.getElementById("counter").innerText = data.number;
+};
+
+async function incrementNumber() {
+    await fetch(`${backendURL}/number/increment`, {
+        method: "POST",
+        headers: { "Authorization": `Bearer ${API_KEY}` }
+    });
 }
-//Test procedure testing fetch requests. Might replace with WebSockets so I can have it be Live Updated when I get my Raspberry Pi 5 :3
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("increment-btn").addEventListener("click", incrementNumber);
+});
