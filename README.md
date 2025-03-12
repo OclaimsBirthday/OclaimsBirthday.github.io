@@ -1,1 +1,2 @@
 This is the git repo for my https://oclaimsbirthday.github.io :3 
+I use pages to host a static boring front end, and I am using a Raspberry Pi 5 as my nodejs, express, psql backend. Might abandon my front end too, and just use my pi as a full stack host. Not sure yet, but enjoy this garbage :3
