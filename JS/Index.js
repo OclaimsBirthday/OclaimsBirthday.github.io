@@ -1,5 +1,5 @@
 const API_KEY = "testkey";
-const backendURL = "https://stable-supposedly-boar.ngrok-free.app"; // Use public URL
+const backendURL = "https://birthday.sillynoodles.net"; // Use public URL
 
 const ws = new WebSocket(backendURL.replace("http", "ws"));
 
